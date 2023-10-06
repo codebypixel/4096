@@ -1,0 +1,1 @@
+botão que escolhe se o usuário quer pintar segurando o clique esquerdo ou só arrastadn o mouse
