@@ -6,7 +6,7 @@ import Wrapper from "@/components/Layout/Wrapper";
 export default function Page(){
   return (
     <Wrapper>
-      <Canvas grid={40}/>
+      <Canvas grid={2}/>
     </Wrapper>
   )
 }

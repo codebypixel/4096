@@ -8,7 +8,6 @@ export const Body = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
-  background-color: #ef5112;
 `;
 
 export default function RootLayout({
