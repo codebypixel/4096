@@ -1,10 +1,11 @@
-'use client';
+"use client";
 
-import styled from "styled-components"
+import React from "react";
+import styled from "styled-components";
 import StyledComponentsRegistry from "./registry";
-import {GlobalStyle} from "../../public/styles/GlobalStyle";
+import { GlobalStyle } from "../../public/styles/GlobalStyle";
 
-export const Body = styled.div`
+const Body = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -14,16 +15,19 @@ export const Body = styled.div`
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <StyledComponentsRegistry>
-        <GlobalStyle />
-      <Body>
-        {children}
-      </Body>
-      </StyledComponentsRegistry>
+      <head>
+        {/* Adicione as tags <title>, <meta>, <link> e outros cabeçalhos aqui, se necessário */}
+      </head>
+      <body>
+        <StyledComponentsRegistry>
+          <GlobalStyle />
+          <Body>{children}</Body>
+        </StyledComponentsRegistry>
+      </body>
     </html>
-  )
+  );
 }
