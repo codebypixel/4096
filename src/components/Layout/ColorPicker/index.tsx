@@ -1,7 +1,9 @@
+"use client"
+
 import React, { useState } from "react";
 import { Container, Display, Picker } from "./styles";
 
-export default function ColorPicker(props: {color: string}) {
+export default function ColorPicker() {
   const [color, setColor] = useState<string>("#000000");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -9,9 +11,9 @@ export default function ColorPicker(props: {color: string}) {
   };
 
   return (
-    <Container>
+    <Container onClick={() => console.log("clicou")}>
       <Picker type="color" value={color} onChange={handleChange}></Picker>
-      <Display color={props.color}>{color}</Display>
+      <Display color={color}>{color}</Display>
     </Container>
   );
 }
